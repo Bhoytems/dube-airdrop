@@ -31,16 +31,16 @@ header h1 {
     margin-bottom: 15px;
 }
 
-/* User Profile with Black Border */
+/* User Profile with Light Blue Background */
 .user-profile {
     display: flex;
     align-items: center;
-    background: #0041c2;
+    background: #7ec8e3; /* Light blue */
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
-    border: 2px solid #000000; /* blavk border */
+    border: 2px solid #000000;
 }
 
 .user-profile img {
@@ -53,13 +53,21 @@ header h1 {
 
 .user-info {
     text-align: left;
-    color: #ffffff;
+    color: #000000; /* Changed to black for better contrast */
+    flex-grow: 1;
 }
 
 .balance {
     font-weight: bold;
-    color: #ffffff;
+    color: #000000;
     margin-top: 5px;
+    font-size: 24px; /* Larger font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #7ec8e3; /* Light blue */
+    padding: 10px;
+    border-radius: 8px;
 }
 
 /* Tasks Section */
@@ -106,8 +114,8 @@ header h1 {
 }
 
 .task-btn {
-    background-color: #0041c2;
-    color: white;
+    background-color: #7ec8e3; /* Light blue */
+    color: #000000; /* Black text */
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
@@ -115,19 +123,22 @@ header h1 {
     font-size: 16px;
     transition: background-color 0.3s;
     min-width: 100px;
+    font-weight: bold;
 }
 
 .task-btn:hover {
-    background-color: #0000ff;
+    background-color: #5db8d9;
 }
 
 .task-btn.completed {
     background-color: #555;
+    color: white;
 }
 
 .task-btn:disabled {
     background-color: #555;
     cursor: not-allowed;
+    color: white;
 }
 
 .task-timer {
@@ -163,11 +174,12 @@ nav a {
     font-size: 12px;
 }
 
-nav a span {
-    font-size: 20px;
+nav a img {
+    width: 24px;
+    height: 24px;
     margin-bottom: 5px;
 }
 
 nav a.active {
-    color: #0041c2;
-}
+    color: #7ec8e3;
+    
