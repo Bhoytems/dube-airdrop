@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUBE Airdrop - Refer & Earn</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>DUBE</h1>
+                <span>Airdrop</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                    <li class="active"><a href="refer.html">Refer & Earn</a></li>
+                    <li id="auth-btn"><a href="#" class="btn">Connect Wallet</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="referral-section">
+            <h2>Refer Friends & Earn More DUBE</h2>
+            <div class="referral-card">
+                <h3>Your Referral Link</h3>
+                <div class="referral-link">
+                    <input type="text" id="referral-link" readonly value="Connect wallet to get your link">
+                    <button class="btn" id="copy-link">Copy</button>
+                </div>
+                <div class="referral-stats">
+                    <div class="stat-card">
+                        <h4>Total Referrals</h4>
+                        <p id="total-referrals">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Earned from Referrals</h4>
+                        <p id="referral-earnings">0 DUBE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="referral-tiers">
+                <h3>Referral Rewards</h3>
+                <div class="tiers-grid">
+                    <div class="tier-card">
+                        <h4>Invite 3 Friends</h4>
+                        <p>Earn 400 DUBE</p>
+                    </div>
+                    <div class="tier-card">
+                        <h4>Invite 5 Friends</h4>
+                        <p>Earn 700 DUBE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="referral-list">
+                <h3>Your Referrals</h3>
+                <div class="referrals-table">
+                    <div class="table-header">
+                        <span>No.</span>
+                        <span>Wallet Address</span>
+                        <span>Date Joined</span>
+                        <span>Status</span>
+                    </div>
+                    <div class="table-body" id="referrals-list">
+                        <!-- Filled dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 DUBE Airdrop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+</body>
+                                                             </html
