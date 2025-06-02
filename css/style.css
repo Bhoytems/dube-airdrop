@@ -133,11 +133,11 @@ nav ul li.active a {
     background-color: var(--darker);
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 300px;
 }
 
 .user-balance p {
-    font-size: 3.2rem;
+    font-size: 15rem;
     margin-bottom: 10px;
 }
 
