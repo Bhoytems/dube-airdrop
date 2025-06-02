@@ -43,7 +43,7 @@
         <section class="daily-bonus">
             <h3>Daily Bonus</h3>
             <div class="bonus-card">
-                <p>Claim your daily bonus of 10 DUBE</p>
+                <p>Claim your daily bonus of 100 DUBE</p>
                 <button id="claim-daily" class="btn">Claim Now</button>
                 <p id="daily-timer">Next claim in: 23:59:59</p>
             </div>
@@ -59,34 +59,53 @@
                     <button class="btn task-btn" data-task="telegram">Complete Task</button>
                     <p class="task-status" id="telegram-status">Not completed</p>
                 </div>
-                <div class="task-card">
-                    <h4>Follow on Twitter</h4>
-                    <p>Follow our official Twitter account</p>
-                    <p class="reward">+50 DUBE</p>
-                    <button class="btn task-btn" data-task="twitter">Complete Task</button>
-                    <p class="task-status" id="twitter-status">Not completed</p>
-                </div>
-                <div class="task-card">
-                    <h4>Retweet Post</h4>
-                    <p>Retweet our latest post</p>
-                    <p class="reward">+30 DUBE</p>
-                    <button class="btn task-btn" data-task="retweet">Complete Task</button>
-                    <p class="task-status" id="retweet-status">Not completed</p>
-                </div>
-                <div class="task-card">
-                    <h4>Invite 3 Friends</h4>
-                    <p>Invite 3 friends to join the airdrop</p>
-                    <p class="reward">+400 DUBE</p>
-                    <button class="btn task-btn" data-task="invite3">Complete Task</button>
-                    <p class="task-status" id="invite3-status">Not completed</p>
-                </div>
-                <div class="task-card">
-                    <h4>Invite 5 Friends</h4>
-                    <p>Invite 5 friends to join the airdrop</p>
-                    <p class="reward">+700 DUBE</p>
-                    <button class="btn task-btn" data-task="invite5">Complete Task</button>
-                    <p class="task-status" id="invite5-status">Not completed</p>
-                </div>
+                <!-- Twitter Follow Task -->
+<div class="task-card">
+    <h4>Follow on Twitter</h4>
+    <p>Follow our official Twitter account to earn 50 DUBE</p>
+    <p class="reward">+50 DUBE</p>
+    <button 
+        class="btn task-btn" 
+        data-task="twitter"
+        data-url="https://twitter.com/YourDUBEHandle"
+        onclick="handleTaskClick('twitter', this)"
+    >
+        Follow & Verify
+    </button>
+    <p class="task-status" id="twitter-status">Not completed</p>
+</div>
+
+<!-- Telegram Join Task -->
+<div class="task-card">
+    <h4>Join Telegram</h4>
+    <p>Join our official Telegram channel to earn 30 DUBE</p>
+    <p class="reward">+30 DUBE</p>
+    <button 
+        class="btn task-btn" 
+        data-task="telegram"
+        data-url="https://t.me/YourDUBEChannel"
+        onclick="handleTaskClick('telegram', this)"
+    >
+        Join & Verify
+    </button>
+    <p class="task-status" id="telegram-status">Not completed</p>
+</div>
+
+<!-- Retweet Task -->
+<div class="task-card">
+    <h4>Retweet Post</h4>
+    <p>Retweet our pinned tweet to earn 30 DUBE</p>
+    <p class="reward">+30 DUBE</p>
+    <button 
+        class="btn task-btn" 
+        data-task="retweet"
+        data-url="https://twitter.com/YourDUBEHandle/status/123456789"
+        onclick="handleTaskClick('retweet', this)"
+    >
+        Retweet & Verify
+    </button>
+    <p class="task-status" id="retweet-status">Not completed</p>
+</div>
             </div>
         </section>
     </main>
