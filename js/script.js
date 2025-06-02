@@ -46,7 +46,55 @@ function setupEventListeners() {
             completeTask(task);
         });
     });
+
+    function handleTaskClick(taskType, buttonElement) {
+    if (!currentUser) {
+        alert('Please connect your wallet first');
+        return;
+    }
+
+    // Get URL from data attribute
+    const taskUrl = buttonElement.getAttribute('data-url');
     
+    // Open the task URL in a new tab
+    window.open(taskUrl, '_blank');
+    
+    // Show verification prompt
+    verifyTaskCompletion(taskType);
+}
+
+function verifyTaskCompletion(taskType) {
+    // For demo purposes - in production you would use API verification
+    const didComplete = confirm(`Did you complete the ${taskType} task?`);
+    
+    if (didComplete) {
+        completeTask(taskType);
+    } else {
+        alert(`Please complete the ${taskType} task first`);
+    }
+}
+
+// Existing completeTask function remains the same
+function completeTask(task) {
+    if (userData.completedTasks[task]) {
+        alert('You already completed this task');
+        return;
+    }
+
+    let reward = 0;
+    switch (task) {
+        case 'telegram': reward = 30; break;
+        case 'twitter': reward = 50; break;
+        case 'retweet': reward = 30; break;
+    }
+
+    userData.completedTasks[task] = true;
+    userData.balance += reward;
+    saveUserData();
+    updateUI();
+    
+    alert(`Verified! ${reward} DUBE added to your balance.`);
+}
     // Copy referral link
     const copyLinkBtn = document.getElementById('copy-link');
     if (copyLinkBtn) {
@@ -326,16 +374,6 @@ function checkForReferral() {
         if (referringUserData) {
             referringUserData.referralCount += 1;
             
-            // Check for referral tier bonuses
-            if (referringUserData.referralCount === 3) {
-                referringUserData.balance += 400;
-                referringUserData.referralEarnings += 400;
-                referringUserData.completedTasks.invite3 = true;
-            } else if (referringUserData.referralCount === 5) {
-                referringUserData.balance += 700;
-                referringUserData.referralEarnings += 700;
-                referringUserData.completedTasks.invite5 = true;
-            }
             
             localStorage.setItem(`dubeUser_${ref}`, JSON.stringify(referringUserData));
         }
@@ -358,7 +396,7 @@ function claimDailyBonus() {
     }
     
     // Add bonus to balance
-    userData.balance += 10;
+    userData.balance += 100;
     userData.lastDailyClaim = now.toISOString();
     saveUserData();
     
@@ -368,7 +406,7 @@ function claimDailyBonus() {
     // Restart the timer
     startDailyTimer();
     
-    alert('Daily bonus claimed! 10 DUBE added to your balance.');
+    alert('Daily bonus claimed! 100 DUBE added to your balance.');
 }
 
 function startDailyTimer() {
@@ -424,39 +462,11 @@ function completeTask(task) {
         case 'retweet':
             reward = 30;
             break;
-        case 'invite3':
-            if (userData.referralCount < 3) {
-                alert('You need to invite at least 3 friends to complete this task.');
-                return;
-            }
-            reward = 400;
-            break;
-        case 'invite5':
-            if (userData.referralCount < 5) {
-                alert('You need to invite at least 5 friends to complete this task.');
-                return;
-            }
-            reward = 700;
-            break;
-        default:
-            alert('Invalid task.');
-            return;
-    }
     
     // Mark task as completed and add reward
     userData.completedTasks[task] = true;
     userData.balance += reward;
     
-    // Special handling for referral tasks
-    if (task === 'invite3' || task === 'invite5') {
-        userData.referralEarnings += reward;
-    }
-    
-    saveUserData();
-    updateUI();
-    
-    alert(`Task completed! ${reward} DUBE added to your balance.`);
-}
 
 function copyReferralLink() {
     if (!currentUser) {
