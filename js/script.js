@@ -201,7 +201,26 @@ function updateReferralPage() {
     if (referralLinkElement && currentUser) {
         referralLinkElement.value = `${window.location.origin}/index.html?ref=${currentUser}`;
     }
+
+ function checkForReferral() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const ref = urlParams.get('ref');
     
+    if (ref && ref !== currentUser) {
+        // In a real app, this would be sent to the backend to process the referral
+        console.log(`User was referred by: ${ref}`);
+        
+        // For simulation, we'll just increment the referral count
+        const referringUserData = JSON.parse(localStorage.getItem(`dubeUser_${ref}`) || 'null');
+        
+        if (referringUserData) {
+            referringUserData.referralCount += 1;
+            referringUserData.balance += 100; // Add 100 DUBE per referral
+            referringUserData.referralEarnings += 100; // Track referral earnings
+            localStorage.setItem(`dubeUser_${ref}`, JSON.stringify(referringUserData));
+        }
+    }
+            }
     // Update referral stats
     const totalReferralsElement = document.getElementById('total-referrals');
     if (totalReferralsElement) {
