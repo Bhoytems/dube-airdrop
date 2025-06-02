@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUBE Airdrop - Earn Free Crypto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>DUBE</h1>
+                <span>Airdrop</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                    <li><a href="refer.html">Refer & Earn</a></li>
+                    <li id="auth-btn"><a href="#" class="btn">Connect Wallet</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Earn DUBE Tokens For Free!</h2>
+                <p>Complete simple tasks and earn DUBE tokens daily. The more you participate, the more you earn!</p>
+                <div class="user-balance">
+                    <p>Your Balance: <span id="user-balance">0</span> DUBE</p>
+                    <p>Referral Bonus: <span id="referral-bonus">0</span> DUBE</p>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/400x300" alt="DUBE Airdrop">
+            </div>
+        </section>
+
+        <section class="daily-bonus">
+            <h3>Daily Bonus</h3>
+            <div class="bonus-card">
+                <p>Claim your daily bonus of 10 DUBE</p>
+                <button id="claim-daily" class="btn">Claim Now</button>
+                <p id="daily-timer">Next claim in: 23:59:59</p>
+            </div>
+        </section>
+
+        <section class="tasks">
+            <h3>Complete Tasks to Earn More</h3>
+            <div class="task-grid">
+                <div class="task-card">
+                    <h4>Join Telegram</h4>
+                    <p>Join our official Telegram channel</p>
+                    <p class="reward">+30 DUBE</p>
+                    <button class="btn task-btn" data-task="telegram">Complete Task</button>
+                    <p class="task-status" id="telegram-status">Not completed</p>
+                </div>
+                <div class="task-card">
+                    <h4>Follow on Twitter</h4>
+                    <p>Follow our official Twitter account</p>
+                    <p class="reward">+50 DUBE</p>
+                    <button class="btn task-btn" data-task="twitter">Complete Task</button>
+                    <p class="task-status" id="twitter-status">Not completed</p>
+                </div>
+                <div class="task-card">
+                    <h4>Retweet Post</h4>
+                    <p>Retweet our latest post</p>
+                    <p class="reward">+30 DUBE</p>
+                    <button class="btn task-btn" data-task="retweet">Complete Task</button>
+                    <p class="task-status" id="retweet-status">Not completed</p>
+                </div>
+                <div class="task-card">
+                    <h4>Invite 3 Friends</h4>
+                    <p>Invite 3 friends to join the airdrop</p>
+                    <p class="reward">+400 DUBE</p>
+                    <button class="btn task-btn" data-task="invite3">Complete Task</button>
+                    <p class="task-status" id="invite3-status">Not completed</p>
+                </div>
+                <div class="task-card">
+                    <h4>Invite 5 Friends</h4>
+                    <p>Invite 5 friends to join the airdrop</p>
+                    <p class="reward">+700 DUBE</p>
+                    <button class="btn task-btn" data-task="invite5">Complete Task</button>
+                    <p class="task-status" id="invite5-status">Not completed</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 DUBE Airdrop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/tasks.js"></script>
+    <script src="js/script.js"></script>
+</body>
+      </html
