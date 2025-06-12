@@ -133,7 +133,7 @@ nav ul li.active a {
     background-color: var(--darker);
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 300px;
+    margin-bottom: 30px;
 }
 
 .user-balance p {
