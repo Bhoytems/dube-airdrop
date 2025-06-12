@@ -137,7 +137,7 @@ nav ul li.active a {
 }
 
 .user-balance p {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
@@ -151,7 +151,7 @@ nav ul li.active a {
 }
 
 .daily-bonus h3 {
-    font-size: 1.8rem;
+    font-size: 0.9rem;
     margin-bottom: 20px;
     color: var(--light);
 }
@@ -166,17 +166,17 @@ nav ul li.active a {
 
 .bonus-card p {
     margin-bottom: 20px;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 #daily-timer {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--gray);
     margin-top: 15px;
 }
 
 .tasks h3 {
-    font-size: 1.8rem;
+    font-size: 0.9rem;
     margin-bottom: 30px;
     color: var(--light);
 }
@@ -201,7 +201,7 @@ nav ul li.active a {
 }
 
 .task-card h4 {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     margin-bottom: 10px;
     color: var(--light);
 }
@@ -232,7 +232,7 @@ nav ul li.active a {
 }
 
 .leaderboard h2 {
-    font-size: 2rem;
+    font-size: 0.9rem;
     margin-bottom: 30px;
     background: linear-gradient(to right, var(--primary), var(--accent));
     -webkit-background-clip: text;
@@ -293,7 +293,7 @@ nav ul li.active a {
 }
 
 .referral-section h2 {
-    font-size: 2rem;
+    font-size: 0.9rem;
     margin-bottom: 30px;
     background: linear-gradient(to right, var(--primary), var(--accent));
     -webkit-background-clip: text;
@@ -310,7 +310,7 @@ nav ul li.active a {
 
 .referral-card h3 {
     margin-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: 0.9rem;
 }
 
 .referral-link {
@@ -347,13 +347,13 @@ nav ul li.active a {
 }
 
 .stat-card h4 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 10px;
     color: var(--gray);
 }
 
 .stat-card p {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--primary);
 }
@@ -363,7 +363,7 @@ nav ul li.active a {
 }
 
 .referral-tiers h3 {
-    font-size: 1.8rem;
+    font-size: 0.8rem;
     margin-bottom: 20px;
 }
 
@@ -386,7 +386,7 @@ nav ul li.active a {
 }
 
 .tier-card h4 {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     margin-bottom: 10px;
 }
 
@@ -396,7 +396,7 @@ nav ul li.active a {
 }
 
 .referral-list h3 {
-    font-size: 1.8rem;
+    font-size: 0.8rem;
     margin-bottom: 20px;
 }
 
